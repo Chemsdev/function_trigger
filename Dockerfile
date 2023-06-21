@@ -6,6 +6,8 @@ WORKDIR /app
 
 # On copie et on lance le pip install du fichier requirements.
 COPY requirements.txt .
+COPY host.json .
+
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8501
 
@@ -17,9 +19,5 @@ COPY transdev_forecast/function.json .
 COPY transdev_forecast/readme.md .
 COPY transdev_forecast/sample.dat .
 
-# Copie des autres fichiers à la racine de l'application
-WORKDIR /app
-COPY host.json .
-COPY requirements.txt .
 
 
