@@ -8,6 +8,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+EXPOSE 8501
+
 # Création du dossier "transdev_forecast" et copie des fichiers correspondants
 WORKDIR /app/transdev_forecast
 COPY transdev_forecast/__init__.py .
