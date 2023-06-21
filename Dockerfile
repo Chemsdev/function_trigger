@@ -23,3 +23,4 @@ WORKDIR /app
 COPY host.json .
 COPY requirements.txt .
 
+CMD ["func", "run"]
